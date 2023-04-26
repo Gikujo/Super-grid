@@ -1,0 +1,320 @@
+@font-face {
+    font-family: 'boom-comics';
+    src: url(ressources/polices/Boom\ Comic\ Font.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial Black", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+body,
+html {
+    width: 99vw;
+    height: 99vh;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12% auto 10%;
+    grid-template-areas:
+        "p1"
+        "p2"
+        "p3";
+}
+
+nav {
+    grid-area: p1;
+    box-shadow: 0px 0px 7px 0px;
+    width: 101%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+nav ul li {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    color: black;
+    width: fit-content;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid black;
+
+}
+
+
+#navbar-hero-logo {
+    background: url(ressources/Superman.png) center/contain no-repeat;
+}
+
+
+
+main {
+    grid-area: p2;
+    display: grid;
+    grid-template-columns: 25% 12.5% 62.5%;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "p2-1 p2-2 p2-3";
+}
+
+footer {
+    grid-area: p3;
+}
+
+#hero-cadre {
+    grid-area: p2-1;
+}
+
+#red-background {
+    position: relative;
+    top: -93%;
+    left: 16%;
+    width: 80%;
+    height: 96%;
+    background: radial-gradient(circle, rgba(255, 188, 124, 1) 2%, rgba(253, 32, 30, 1) 100%);
+    z-index: 1;
+    border-bottom-left-radius: 30px;
+}
+
+#hero-photo {
+    width: 100%;
+    height: 95%;
+    position: relative;
+    top: 3%;
+    left: 20%;
+    background: url(ressources/sm.png) center/contain no-repeat;
+    z-index: 3;
+}
+
+#menu {
+    grid-area: p2-2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "p2-2-1"
+        "p2-2-2"
+        "p2-2-3"
+        "p2-2-4"
+        "p2-2-5";
+}
+
+#video-cadre {
+    grid-area: p2-3;
+}
+
+#empty-case-1,
+#empty-case-2 {
+    display: none;
+}
+
+#superman-link {
+    grid-area: p2-2-1;
+}
+
+#batman-link {
+    grid-area: p2-2-2;
+}
+
+#wonder-woman-link {
+    grid-area: p2-2-3;
+}
+
+#green-lantern-link {
+    grid-area: p2-2-4;
+}
+
+#aquaman-link {
+    grid-area: p2-2-5;
+}
+
+.hero-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-logo {
+    border-radius: 50%;
+    width: 35%;
+}
+
+.bold {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#hero-name {
+    height: auto;
+    width: 50vw;
+    font-family: boom-comics;
+    font-size: 3.5rem;
+    position: relative;
+    left: 3vw;
+    top: 2%;
+}
+
+video {
+    width: 55vw;
+    position: relative;
+    top: 3%;
+    left: 1vw;
+}
+
+footer {
+    border-top: 0.5px solid grey;
+}
+
+#copyright {
+    width: 3.5vh;
+    height: 3.5vh;
+    border-radius: 50%;
+    background: url(ressources/copyleft.png) center/contain no-repeat;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 28%
+}
+
+#copyright-text {
+    width: fit-content;
+    font-size: 0.7rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+}
+
+
+@media screen and (max-width:800px) {
+
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15% auto 10%;
+        grid-template-areas:
+            "p1"
+            "p2"
+            "p3";
+    }
+
+    nav {
+        grid-area: p1;
+    }
+
+    #navbar-hero-logo {
+        position: relative;
+        left: -4vw;
+    }
+
+    main {
+        grid-area: p2;
+        display: grid;
+        grid-template-columns: 34% 66%;
+        grid-template-rows: 20% 80%;
+        grid-template-areas:
+            "p2-2 p2-2"
+            "p2-1 p2-3";
+    }
+
+    .hero-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-end;
+    }
+
+    .hero-link p {
+        text-align: center;
+        margin-bottom: 3vw;
+    }
+
+    footer {
+        grid-area: p3;
+        border-top: 0.01rem solid grey;
+        width: 101%;
+    }
+
+    #hero-cadre {
+        grid-area: p2-1;
+    }
+
+    #hero-photo {
+        width: 100%;
+        top: 5vh;
+        left: 1vw;
+    }
+
+    #red-background {
+        height: 51vh;
+        width: 31vw;
+        top: -53vh;
+        left: 3%;
+    }
+
+
+    #menu {
+        grid-area: p2-2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "e-1 e-1 p2-2-5 p2-2-2 p2-2-3 p2-2-4 p2-2-1 e-2 e-2";
+    }
+
+    #empty-case-1 {
+        display: block;
+        grid-area: e-1;
+    }
+
+    #empty-case-2 {
+        display: block;
+        grid-area: e-2
+    }
+
+    #video-cadre {
+        grid-area: p2-3;
+    }
+
+    #hero-name {
+        font-size: 2.5rem;
+        top: 18%;
+        left: 1vw;
+    }
+
+    video {
+        position: relative;
+        top: 16.5vh;
+        width: 64vw;
+        left: 1vw;
+    }
+
+    footer {}
+
+
+
+
+}
